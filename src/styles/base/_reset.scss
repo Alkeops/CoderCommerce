@@ -16,7 +16,18 @@ html tags
 *:after {
   box-sizing: inherit;
 }
+//CSS Vars
+//Uso algunas variables css para cosas que quisiera poder modificar desde el inspector del navegador,
+//Además las variables css permiten el uso de mediaquerys
+:root {
+  --color-blanco: #{$color-blanco};
+  --color-gris-oscuro: #{$color-gris-oscuro};
+  --color-rojo: #{$color-rojo};
 
+  --fuente-principal: #{$fuente-principal};
+
+  --border-radius: #{$border-radius};
+}
 html {
   position: relative;
   min-width: 100%; //Esto ayuda a usar medidas relativas como rem, asi 1 rem es igual a 10px;
@@ -27,18 +38,25 @@ html {
 }
 
 body {
-  background: $color-blanco;
-  font-family: $fuente-principal;
+  background: var(--color-blanco);
+  font-family: var(--fuente-principal);
   font-size: 1.6rem;
   font-size: 16px;
   letter-spacing: 0.3px;
   height: 100%;
 }
 a {
-  color: inherit;
   cursor: pointer;
   text-decoration: none;
-  font-family: $fuente-principal;
+  font-family: var(--fuente-principal);
+  color: var(--color-gris-oscuro);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  &:hover {
+    color: var(--color-rojo);
+  }
 }
 button {
   background: none;
@@ -52,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $fuente-principal;
+  font-family: var(--fuente-principal);
   margin: 0;
 }
 p {

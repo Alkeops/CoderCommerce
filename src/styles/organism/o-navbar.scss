@@ -1,0 +1,18 @@
+.o-navbar {
+  align-items: center;
+  background: var(--color-blanco);
+  color: var(--color-gris-oscuro);
+  display: flex;
+  height: 114px;
+  justify-content: space-between;
+  padding: 0 120px;
+  position: relative;
+  width: 100%;
+  &__logo {
+    font-size: 4rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+}

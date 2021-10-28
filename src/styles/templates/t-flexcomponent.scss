@@ -1,0 +1,11 @@
+.t-flexcomponent{
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  &--vertical{
+    grid-auto-flow: row;
+    height: max-content;
+    width: 100%;
+  }
+}
