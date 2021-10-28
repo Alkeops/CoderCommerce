@@ -17,7 +17,7 @@ const Button = ({
     [`${prefix}--${variant}`]: variant,
   }); //Si variant existe y es = success (por ejemplo), generaria la clase a-button--succes
   return (
-    <button className={classForComponent} {...props}>
+    <button className={classForComponent} onClick={onClick} {...props}>
       {leftContent}
       {typeof content == "string" ? (
         <span className={`${prefix}__span`}>{content}</span> //Especificamente si es tipo string lo pongo en un span para no tener que mandar otras etiquetas por props

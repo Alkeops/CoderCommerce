@@ -3,19 +3,25 @@
   background: var(--color-blanco);
   color: var(--color-gris-oscuro);
   display: flex;
-  height: 114px;
+  height: 80px;
   justify-content: space-between;
   padding: 0 var(--padding-general);
   position: relative;
   width: 100%;
-  @include xxl(){
-    background: red;
-  }
   &__logo {
-    font-size: 4rem;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+    font-size: 2rem;
   }
-
+  @include md() {
+    height: 114px;
+    &__logo {
+      font-size: 4rem;
+    }
+  }
+  @include xl() {
+    &__logo {
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+  }
 }

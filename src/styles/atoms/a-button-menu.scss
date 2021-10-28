@@ -1,0 +1,53 @@
+
+.a-button-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  width: 30px;
+  span {
+    background: var(--color-gris-oscuro);
+    display: block;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.5s;
+    width: 25px;
+    z-index: 1;
+    &:first-child {
+      width: 17px;
+      right: 1px;
+      transition: 0.7s;
+    }
+    &:last-child {
+      left: 3px;
+      transition: 0.5s;
+      width: 12px;
+    }
+  }
+  @include md() {
+    display: none;
+  }
+  &.is-open {
+    span {
+      margin: 0;
+      position: static;
+      transform-origin: center;
+      &:first-child {
+        transform: translateY(2px) rotate(45deg);
+        width: 20px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        opacity: 0;
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+        width: 20px;
+      }
+    }
+  }
+}
