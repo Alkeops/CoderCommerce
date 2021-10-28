@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { MyAwesomeIcons, Button, ButtonMenu } from "components/atoms";
 import { FlexComponent } from "components/templates";
+import { MyAwesomeIcons, Button, ButtonMenu, CartButton } from "components/atoms";
 
-const NavbarButton = ({toggleMenu, active}) => (
+const NavbarButton = ({ toggleMenu, active }) => (
   <FlexComponent>
     <Button
+      onClick={() => {}}
       content={<MyAwesomeIcons icon="search" size={20} />}
       variant="navbar"
     />
@@ -20,11 +21,7 @@ const NavbarButton = ({toggleMenu, active}) => (
       content={<MyAwesomeIcons icon="user" size={22} />}
       variant="navbar"
     />
-    <Button
-      onClick={() => {}}
-      content={<MyAwesomeIcons icon="cart" size={21} />}
-      variant="navbar"
-    />
+    <CartButton />
     <ButtonMenu toggle={toggleMenu} active={active} />
   </FlexComponent>
 );
@@ -32,5 +29,5 @@ const NavbarButton = ({toggleMenu, active}) => (
 export default NavbarButton;
 
 NavbarButton.propTypes = {
-  toggleMenu: PropTypes.func
-}
+  toggleMenu: PropTypes.func,
+};
