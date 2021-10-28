@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { FlexComponent } from "components/templates";
-import { MyAwesomeIcons, Button, ButtonMenu, CartButton } from "components/atoms";
+import { MyAwesomeIcons, Button, ButtonMenu } from "components/atoms";
+import CartItems from "./CartItems";
 
 const NavbarButton = ({ toggleMenu, active }) => (
   <FlexComponent>
@@ -21,7 +22,7 @@ const NavbarButton = ({ toggleMenu, active }) => (
       content={<MyAwesomeIcons icon="user" size={22} />}
       variant="navbar"
     />
-    <CartButton />
+    <CartItems />
     <ButtonMenu toggle={toggleMenu} active={active} />
   </FlexComponent>
 );

@@ -7,7 +7,7 @@
   grid-auto-flow: row;
   padding: 0 10px var(--padding-general);
   background: var(--color-blanco);
-    border-bottom: 1px solid var(--color-gris-oscuro);
+    border-bottom: var(--border-1px);
   overflow: hidden;
   gap: 15px;
   transition: .3s;
