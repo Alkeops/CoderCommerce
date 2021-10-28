@@ -5,9 +5,12 @@
   display: flex;
   height: 114px;
   justify-content: space-between;
-  padding: 0 120px;
+  padding: 0 var(--padding-general);
   position: relative;
   width: 100%;
+  @include xxl(){
+    background: red;
+  }
   &__logo {
     font-size: 4rem;
     left: 50%;

@@ -27,6 +27,10 @@ html tags
   --fuente-principal: #{$fuente-principal};
 
   --border-radius: #{$border-radius};
+  --padding-general: #{$padding-general};
+  @include xxl(){
+    --padding-general: #{$padding-general-xxl}
+  }
 }
 html {
   position: relative;

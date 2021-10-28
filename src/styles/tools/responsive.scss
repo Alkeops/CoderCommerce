@@ -36,11 +36,24 @@
     @content;
   }
 } // * FROM 768px to infinity
+
 /* XL */
+@mixin only-xl() {
+  @include media-between($screen-xl, $screen-xxl) {
+    @content;
+  }
+} // * FROM 1200px to 1440px
 @mixin xl() {
   @include media-up($screen-xl) {
     @content;
   }
 } // * FROM 1200px to infinity
+
+/*XXL*/
+@mixin xxl() {
+  @include media-up($screen-xxl) {
+    @content;
+  }
+} //* FROM 1440px to infinity
 
 /*=====  End of Media mixin  ======*/
