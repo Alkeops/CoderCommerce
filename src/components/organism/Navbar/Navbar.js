@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <header className={prefix}>
       <NavbarLinks />
-      <h1 className={`${prefix}__logo`}>bixbang.</h1>
+      <h1 className={`${prefix}__logo`} style={{cursor: 'pointer'}}>bixbang.</h1>
     <NavbarButtons />
     </header>
   );

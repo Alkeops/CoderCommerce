@@ -1,4 +1,5 @@
 @import "./abstracts/abstracts.scss"; //El orden es importante, leer sobre ITCSS
+@import "./tools/responsive.scss";
 @import "./base/base.scss";
 @import "./templates/templates.scss";
 @import "./organism/organism.scss";
