@@ -1,30 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Navbar } from "components/organism";
+import classNames from "classnames";
 
-const UserLayout = ({ children }) => (
-  <>
-    <Navbar />
-    <main>{children}</main>
-    <footer
-      style={{
-        width: "100%",
-        background: "var(--color-gris-oscuro)",
-        height: 40,
-        marginTop: "auto",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "var(--color-blanco)",
-        position: "absolute",
-        bottom: 0,
-      }}
-    >
-      {" "}
-      coder;{" "}
-    </footer>
-  </>
-);
+import { Navbar, Scrollbar } from "components/organism";
+const prefix = "t-user-layout";
+const UserLayout = ({ children }) => {
+  const classForComponent = classNames(prefix, {});
+  return (
+    <div className={classForComponent}>
+      <Navbar />
+      <main className={`${prefix}__main`}>
+        <Scrollbar disableTracksWidthCompensation>{children}</Scrollbar>
+      </main>
+      <footer className={`${prefix}__footer`}> coder; </footer>
+    </div>
+  );
+};
 
 UserLayout.propTypes = {
   children: PropTypes.node.isRequired,

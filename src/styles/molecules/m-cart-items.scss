@@ -10,6 +10,7 @@
     transition: 0.3s;
     transform-origin: top;
     border-bottom: var(--border-1px);
+    z-index: 3;
     &-list {
       height: 200px;
       width: 100%;

@@ -7,25 +7,26 @@
   grid-auto-flow: row;
   padding: 0 10px var(--padding-general);
   background: var(--color-blanco);
-    border-bottom: var(--border-1px);
+  border-bottom: var(--border-1px);
   overflow: hidden;
   gap: 15px;
-  transition: .3s;
+  transition: 0.3s;
   transform: scaleY(0);
   transform-origin: top;
+  z-index: 3;
   a {
     font-size: 1.8rem;
     padding: 4px calc(var(--padding-general) - 10px);
     border-radius: var(--border-radius);
     border: 1px solid transparent;
-    transition: .5s;
-    &:hover{
-    border: 1px solid #f3f3f3;
+    transition: 0.5s;
+    &:hover {
+      border: 1px solid #f3f3f3;
     }
   }
-  &.is-active{
+  &.is-active {
     transform: scaleY(1);
-      box-shadow: 0px 10px 0px rgba($color-gris-oscuro, 0.04);
+    box-shadow: 0px 10px 0px rgba($color-gris-oscuro, 0.04);
   }
   @include md() {
     position: inherit;
@@ -36,16 +37,16 @@
     padding: 0;
     border: none;
     transform: scaleY(1);
-    &.is-active{
+    &.is-active {
       box-shadow: none;
     }
-    a{
-     padding: 0;
-     font-size: 1.5rem;
-     border: none;
-     &:hover{
-       border: none;
-     }
+    a {
+      padding: 0;
+      font-size: 1.5rem;
+      border: none;
+      &:hover {
+        border: none;
+      }
     }
   }
 }

@@ -1,0 +1,19 @@
+.o-scrollbar {
+  transition: 0.3s;
+  .ScrollbarsCustom-Track {
+    opacity: 0;
+    transition: 1s;
+    background: transparent !important;
+    width: 5px !important;
+      border-radius: 0 !important;
+    .ScrollbarsCustom-Thumb {
+      background: var(--color-gris-oscuro) !important;
+      border-radius: 0 !important;
+    }
+  }
+  &:hover {
+    & > .ScrollbarsCustom-Track {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.t-user-layout{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__main{
+    height: calc(100% - 120px); //El 100% - el footer y el header;
+    @include md(){
+      height: calc(100% - 154px);
+    }
+  }
+  &__footer{
+    background: var(--color-gris-oscuro);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blanco);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -6,6 +6,11 @@ const Home = () => (
   <UserLayout>
     <div style={{padding: "20px var(--padding-general)"}}>
       <Slider />
+      <Slider />
+      <Slider />
+      <Slider />
+      <Slider />
+      <Slider />
     </div>
   </UserLayout>
 );
