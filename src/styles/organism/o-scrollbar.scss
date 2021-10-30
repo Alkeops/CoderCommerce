@@ -1,11 +1,15 @@
 .o-scrollbar {
   transition: 0.3s;
   .ScrollbarsCustom-Track {
-    opacity: 0;
+    opacity: 1;
+
     transition: 1s;
     background: transparent !important;
     width: 5px !important;
       border-radius: 0 !important;
+    @include md(){
+      opacity: 0;
+    }
     .ScrollbarsCustom-Thumb {
       background: var(--color-gris-oscuro) !important;
       border-radius: 0 !important;
